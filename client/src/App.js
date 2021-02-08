@@ -3,6 +3,7 @@ import "./App.css";
 import Home from "./components/pages/Home";
 import './MainStyle.css';
 import Users from './components/pages/Users'
+import Adduser from './components/Adduser'
 import {
   BrowserRouter as Router,
   Route,
@@ -14,7 +15,9 @@ function App(props) {
     <div className="App">
       <Switch>
         <Route exact path="/" component={Home} />
+        <Route  path="/Adduser"  component={Adduser} />
         <Route  path="/:name" id=":_id"   component={Users} />
+        
       </Switch>
     </div>
   </Router>

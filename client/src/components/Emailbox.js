@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
 import { TextField,Button,Typography } from '@material-ui/core';
 import emailjs from "emailjs-com";
-
+import { Alert } from 'react-alert'
 
   function getModalStyle() {
     const top = 50 ;
@@ -52,11 +52,14 @@ import emailjs from "emailjs-com";
 
   emailjs.sendForm('service_wk5pnhe', 'template_9sz15ef', e.target, 'user_VFybhY6rdNbuXC9LmNicz')
       .then((result) => {
-          console.log(result.text);
+          alert("Email Sended successfully");
       }, (error) => {
-          console.log(error.text);
+          alert(error.text);
+      }).then(()=>{
+        
       });
       e.target.reset()
+      handleClose();
   }
     const handleClose = () => {
       

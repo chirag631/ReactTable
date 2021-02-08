@@ -186,7 +186,7 @@ const useStyles = makeStyles((theme) => ({
   visuallyHidden: {
     border: 0,
     clip: 'rect(0 0 0 0)',
-    height: 1,
+    height: 1,  
     margin: -1,
     overflow: 'hidden',
     padding: 0,
@@ -373,9 +373,11 @@ console.log(text);
         <EnhancedTableToolbar numSelected={selected.length} />
         
         <div class="fl w-60  ">              
-        <Button  >                
-             <a src='/register'>     <Adduser/></a>    
-            </Button> 
+        <Button variant="contained" color="//#endregion" >
+          <Link class="btn btn-primary mr-2"  to={{pathname:"/Adduser"}} >
+              Add User
+             </Link>                  
+          </Button>
         <TextField fullWidth  className="mb-10 mr-50 pa-4" id="outlined-search" label="Search Name"
            type="search"  variant="outlined" value={q} onChange={(e) => setQ(e.target.value)}   />  
            

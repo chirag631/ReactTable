@@ -69,7 +69,8 @@ app.post("/post", async(req,res)=>{
             });
 
             const registered= await registerEmployee.save();
-            res.status(201).send("success");
+            console.log(registered);
+            res.status(201).send(registered);
 
     }catch(e){
         res.status(400).set("error");
